@@ -1,0 +1,10 @@
+---
+ - name: Using multiple items
+   hosts: localhost
+   tasks:
+    - name: multiple items
+      debug:
+       msg: "Items {{item}}"
+      with_items:
+       - "a"
+       - "b"

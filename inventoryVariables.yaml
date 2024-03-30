@@ -1,0 +1,16 @@
+---
+ - name: "Handling inventory variables"
+   hosts: localhost
+   gather_facts: true
+   vars:
+    - greetings: "Welcome"
+   tasks:
+    - name: Display System info
+      debug:
+       msg: "OS info {{ansible_system}}"
+    - name: Display hostname in ansible
+      debug:
+       msg: "Hostname in ansible - {{ansible_hostname}}"
+    - name: Display hostname is inventory
+      debug:
+       msg: "Hostname in inventory - {{inventory_hostname}}" 
